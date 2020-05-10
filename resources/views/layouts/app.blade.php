@@ -18,6 +18,21 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    <!-- Toastr -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <link href="{{ asset('libreria/toastr/toastr.scss') }}" rel="stylesheet"/>
+    <script src="{{ asset('libreria/toastr/toastr.js') }}"></script>
+
+
+
+
+
+
 </head>
 <body>
     <div id="app">
