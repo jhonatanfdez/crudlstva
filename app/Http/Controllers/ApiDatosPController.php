@@ -85,8 +85,9 @@ class ApiDatosPController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(DatosP $datosp)
     {
-        //
+        $datosp->delete();
+        return 'Registro eliminado correctamente!';
     }
 }

@@ -38,7 +38,7 @@
                             <td>
 
                               <button type="button" class="btn btn-outline-info">Editar</button>
-                              <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                              <button type="button" class="btn btn-outline-danger" @click="EliminarDato(dato)">Eliminar</button>
 
 
 

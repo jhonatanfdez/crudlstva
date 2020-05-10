@@ -94,6 +94,56 @@ var app = new Vue({
 
 
 
+        },
+        EliminarDato(dato){
+            console.log(dato);
+
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                  confirmButton: 'btn btn-success',
+                  cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: true
+              })
+              
+              swalWithBootstrapButtons.fire({
+                title: '¿Estas Seguro?',
+                html: "Si eliminas el registro de <strong>"+ dato.nombre +"</strong>, <br>¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Eliminar!',
+                cancelButtonText: 'Cancelar!',
+                confirmButtonColor: '#28a745',
+                cancelButtonColor: '#d33',
+                reverseButtons: true
+              }).then( async (result) => {
+                if (result.value) {
+
+
+                let url = '/api/datosp/'+dato.id;
+                await axios.delete(url).then(response=>{
+                    console.log(response.data);
+                    this.mensaje=response.data;
+                });
+
+                this.getDatos();                  
+                toastr.success(this.mensaje);
+
+
+                } else if (
+                  /* Read more about handling dismissals below */
+                  result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    toastr.error('Acción Cancelada!');  
+                }
+              })
+
+
+
+
+
+
         }
 
     },
