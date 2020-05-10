@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-  
+                    <button type="button" class="btn btn-outline-primary float-right" @click="NuevoDato()">Nuevo</button> 
+                    <br>
+                    <br>   
 
 
                     <table class="table">
@@ -33,7 +35,15 @@
                             <td>@{{ dato.nombre}}</td>
                             <td>@{{ dato.posicion}}</td>
                             <td>@{{ dato.salario}}</td>
-                            <td>@mdo</td>
+                            <td>
+
+                              <button type="button" class="btn btn-outline-info">Editar</button>
+                              <button type="button" class="btn btn-outline-danger">Eliminar</button>
+
+
+
+
+                            </td>
                           </tr>
                          
                         </tbody>
