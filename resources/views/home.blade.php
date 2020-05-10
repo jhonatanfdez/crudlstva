@@ -14,7 +14,33 @@
                         </div>
                     @endif
 
-                    You are logged in!
+  
+
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Salario</th>
+                            <th scope="col">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="dato in datos">
+                            <th scope="row">@{{ dato.id}}</th>
+                            <td>@{{ dato.nombre}}</td>
+                            <td>@{{ dato.posicion}}</td>
+                            <td>@{{ dato.salario}}</td>
+                            <td>@mdo</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+
+
+
                 </div>
             </div>
         </div>
